@@ -84,7 +84,7 @@ function createChannel() {
                         orientation: "landscape",
                         viewEdit: {
                             // extra guide for the User
-                            message: "If you cannot see the map picker, click on the map button in Property Panel."
+                            message: "Change the menu items by double-clicking on them.",
                         },
                         keywords: "demo",
                         config: configuration // Property Panel is sent in "config" property for showcasing purposes (to be able to insert comments)

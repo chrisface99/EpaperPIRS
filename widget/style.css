@@ -349,58 +349,67 @@ html, body {
         }
 
         @media (min-width: 1800px) {
+    html, body {
+        font-size: 22px;
+    }
     .chalkboard-container {
-        min-width: 1600px;
+        min-width: 2000px;
         min-height: 1200px;
-        padding: 80px;
+        padding: 100px;
     }
     .chalkboard-border {
-        border-width: 12px;
-        border-radius: 36px;
-        padding: 80px;
-        min-height: 1200px;
+        border-width: 14px;
+        border-radius: 48px;
+        padding: 100px;
+        min-height: 1300px;
     }
     .menu-container {
-        max-width: 1800px;
-        max-height: 1200px;
-        padding: 80px 120px 100px 120px;
+        max-width: 2200px;
+        max-height: 1400px;
+        padding: 100px 180px 120px 180px;
     }
     .main-title, .menu-title {
-        font-size: clamp(4rem, 7vw, 7rem);
+        font-size: clamp(5rem, 8vw, 9rem);
     }
     .subtitle, .restaurant-title {
-        font-size: clamp(2rem, 3vw, 3.5rem);
+        font-size: clamp(2.5rem, 4vw, 4.5rem);
     }
     .section-title, .banner-shape {
-        font-size: clamp(2.2rem, 3vw, 3.5rem);
-        min-width: 220px;
-        padding: 8px 48px 8px 32px;
+        font-size: clamp(2.8rem, 4vw, 4.5rem);
+        min-width: 320px;
+        padding: 12px 64px 12px 48px;
     }
     .item-name {
-        font-size: 1.7rem !important;
-        max-width: 18ch;
+        font-size: 2.2rem !important;
+        max-width: 22ch;
     }
     .item-description, .item-desc {
-        font-size: 1.2rem;
+        font-size: 1.7rem;
     }
     .item-price {
-        font-size: 1.7rem;
-        min-width: 80px;
+        font-size: 2.2rem;
+        min-width: 120px;
     }
     .special-title, .special-price {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .special-box, .special-dish, .special-menu {
-        min-width: 320px;
-        font-size: 1.5rem;
-        padding: 32px 32px;
+        min-width: 420px;
+        font-size: 2rem;
+        padding: 48px 48px;
     }
     .side-banner {
-        font-size: 1.7rem;
-        min-width: 320px;
-        padding: 32px 24px;
+        font-size: 2.2rem;
+        min-width: 420px;
+        padding: 48px 36px;
     }
     .side-note {
-        font-size: 1.5rem;
+        font-size: 2rem;
+    }
+    .banner-large {
+        padding: 40px 40px;
+    }
+    .special-offer {
+        font-size: 2rem;
     }
 }

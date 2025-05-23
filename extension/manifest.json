@@ -1,1 +1,38 @@
-{}
+[
+  {
+    "type": "settings",
+    "id": "partial",
+    "displayType": "appName",
+    "initialState": "always",
+    "save": "custom",
+    "reopen": "goBack"
+  },
+  {
+    "type": "message",
+    "id": "signIn",
+    "value": "Welcome to E-paper Menuboard PIRS",
+    "caption": "",
+    "size": "large",
+    "position": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  {
+    "type": "message",
+    "id": "signInDescription",
+    "value": "To access the E-paper Menuboard PIRS, please click the 'Open' button.",
+    "caption": "To access the E-paper Menuboard PIRS, please click the 'Open' button."
+  },
+  {
+    "type": "action",
+    "id": "submitForm",
+    "caption": "Open",
+    "action": "dispatchConfig",
+    "size": "large",
+    "position": {
+      "x": -8,
+      "y": -8
+    }
+  }
+]
