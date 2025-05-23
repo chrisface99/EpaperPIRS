@@ -1,6 +1,6 @@
-html, body {
-            height: 100%;
-            width: 100%;
+  html, body {
+            height: 100vh;
+            width: 100vw;
             margin: 0;
             padding: 0;
             font-family: 'Kalam', cursive;
@@ -9,95 +9,100 @@ html, body {
                 radial-gradient(circle at 25% 25%, #333 1px, transparent 1px),
                 radial-gradient(circle at 75% 75%, #333 1px, transparent 1px),
                 linear-gradient(45deg, transparent 49%, rgba(255,255,255,0.03) 50%, transparent 51%);
-            background-size: 20px 20px, 20px 20px, 40px 40px;
+            background-size: 2vw 2vw, 2vw 2vw, 4vw 4vw;
             color: #f5f5f5;
-            overflow-x: auto;
-            min-height: 100vh;
+            overflow: hidden;
+            font-size: calc(0.8vw + 0.5vh);
         }
 
         .chalkboard-container {
-            min-width: 900px;
-            min-height: 100vh;
-            padding: 40px;
+            width: 100vw;
+            height: 100vh;
+            padding: 2vh 2vw;
             box-sizing: border-box;
             position: relative;
         }
 
         .chalkboard-border {
-            border: 8px solid #f5f5f5;
-            border-radius: 20px;
-            padding: 40px;
-            min-height: calc(100vh - 120px);
+            border: 0.8vh solid #f5f5f5;
+            border-radius: 2vh;
+            padding: 3vh 3vw;
+            width: 100%;
+            height: 100%;
             position: relative;
             background: #2a2a2a;
             box-shadow: 
-                inset 0 0 50px rgba(0,0,0,0.3),
-                0 0 30px rgba(0,0,0,0.5);
+                inset 0 0 5vh rgba(0,0,0,0.3),
+                0 0 3vh rgba(0,0,0,0.5);
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
         }
 
         .chalkboard-border::before {
             content: '';
             position: absolute;
-            top: -4px;
-            left: -4px;
-            right: -4px;
-            bottom: -4px;
-            border: 4px solid #f5f5f5;
-            border-radius: 24px;
+            top: -0.4vh;
+            left: -0.4vh;
+            right: -0.4vh;
+            bottom: -0.4vh;
+            border: 0.4vh solid #f5f5f5;
+            border-radius: 2.4vh;
             z-index: -1;
         }
 
         .corner-ornament {
             position: absolute;
-            width: 60px;
-            height: 60px;
-            border: 4px solid #f5f5f5;
+            width: 6vh;
+            height: 6vh;
+            border: 0.4vh solid #f5f5f5;
         }
 
         .corner-ornament.top-left {
-            top: -8px;
-            left: -8px;
+            top: -0.8vh;
+            left: -0.8vh;
             border-right: none;
             border-bottom: none;
-            border-radius: 20px 0 0 0;
+            border-radius: 2vh 0 0 0;
         }
 
         .corner-ornament.top-right {
-            top: -8px;
-            right: -8px;
+            top: -0.8vh;
+            right: -0.8vh;
             border-left: none;
             border-bottom: none;
-            border-radius: 0 20px 0 0;
+            border-radius: 0 2vh 0 0;
         }
 
         .corner-ornament.bottom-left {
-            bottom: -8px;
-            left: -8px;
+            bottom: -0.8vh;
+            left: -0.8vh;
             border-right: none;
             border-top: none;
-            border-radius: 0 0 0 20px;
+            border-radius: 0 0 0 2vh;
         }
 
         .corner-ornament.bottom-right {
-            bottom: -8px;
-            right: -8px;
+            bottom: -0.8vh;
+            right: -0.8vh;
             border-left: none;
             border-top: none;
-            border-radius: 0 0 20px 0;
+            border-radius: 0 0 2vh 0;
         }
 
         .menu-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 3vh;
             position: relative;
+            flex-shrink: 0;
         }
 
         .main-title {
-            font-size: clamp(3rem, 8vw, 6rem);
+            font-size: calc(4vw + 2vh);
             font-weight: 700;
             letter-spacing: 0.1em;
             margin: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 0.2vh 0.2vh 0.4vh rgba(0,0,0,0.5);
             transform: rotate(-1deg);
             position: relative;
         }
@@ -105,19 +110,19 @@ html, body {
         .main-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -1vh;
             left: 10%;
             right: 10%;
-            height: 4px;
+            height: 0.4vh;
             background: #f5f5f5;
             transform: rotate(0.5deg);
         }
 
         .subtitle {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-size: calc(1.5vw + 1vh);
             font-weight: 400;
             letter-spacing: 0.15em;
-            margin: 10px 0 0 0;
+            margin: 1vh 0 0 0;
             transform: rotate(0.5deg);
         }
 
@@ -125,19 +130,19 @@ html, body {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin: 30px 0;
-            gap: 20px;
-            flex-wrap: wrap;
+            margin: 2vh 0;
+            gap: 2vw;
         }
 
         .special-box {
-            border: 3px solid #f5f5f5;
-            padding: 20px;
+            border: 0.3vh solid #f5f5f5;
+            padding: 1.5vh 1.5vw;
             text-align: center;
             background: rgba(255,255,255,0.05);
             transform: rotate(-1deg);
             position: relative;
-            min-width: 200px;
+            flex: 1;
+            max-width: 20vw;
         }
 
         .special-box.left {
@@ -149,50 +154,53 @@ html, body {
         }
 
         .special-title {
-            font-size: 1.2rem;
+            font-size: calc(0.8vw + 0.8vh);
             font-weight: 700;
             letter-spacing: 0.1em;
-            margin-bottom: 10px;
+            margin-bottom: 0.8vh;
             text-decoration: underline;
+            line-height: 1.2;
         }
 
         .special-price {
-            font-size: 2.5rem;
+            font-size: calc(1.5vw + 1.5vh);
             font-weight: 700;
-            margin: 10px 0;
+            margin: 0.8vh 0;
         }
 
         .special-note {
-            font-size: 1.1rem;
+            font-size: calc(0.7vw + 0.7vh);
             font-weight: 400;
             font-style: italic;
-            margin-top: 10px;
+            margin-top: 0.8vh;
         }
 
         .menu-content {
-            display: flex;
-            gap: 40px;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3vw;
+            align-items: start;
+            flex: 1;
+            overflow: hidden;
         }
 
         .menu-section {
-            flex: 1;
-            min-width: 300px;
-            max-width: 400px;
+            min-width: 0;
+            height: 100%;
+            overflow: hidden;
         }
 
         .section-banner {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 2vh;
             position: relative;
         }
 
         .banner-shape {
             background: #f5f5f5;
             color: #2a2a2a;
-            padding: 12px 40px;
-            font-size: 1.8rem;
+            padding: 1vh 3vw;
+            font-size: calc(1vw + 1vh);
             font-weight: 700;
             letter-spacing: 0.1em;
             position: relative;
@@ -206,69 +214,68 @@ html, body {
             position: absolute;
             top: 0;
             bottom: 0;
-            width: 20px;
+            width: 1.5vw;
             background: #f5f5f5;
         }
 
         .banner-shape::before {
-            left: -15px;
+            left: -1.2vw;
             transform: skew(-15deg);
         }
 
         .banner-shape::after {
-            right: -15px;
+            right: -1.2vw;
             transform: skew(15deg);
         }
 
         .menu-item {
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 10px;
+            margin-bottom: 1.5vh;
+            padding-bottom: 1vh;
+            border-bottom: 0.1vh dotted rgba(255,255,255,0.3);
         }
 
         .item-name {
-            font-size: 1.3rem;
+            font-size: calc(0.8vw + 0.8vh);
             font-weight: 700;
             letter-spacing: 0.05em;
             text-transform: uppercase;
-            flex-shrink: 0;
-            max-width: 140px;
+            display: block;
+            margin-bottom: 0.5vh;
         }
 
         .item-description {
-            font-size: 1rem;
+            font-size: calc(0.6vw + 0.6vh);
             font-weight: 300;
             color: #ddd;
-            flex: 1;
-            margin: 0 15px;
-            line-height: 1.3;
+            line-height: 1.2;
+            margin-bottom: 0.5vh;
         }
 
         .item-price {
-            font-size: 1.3rem;
+            font-size: calc(0.8vw + 0.8vh);
             font-weight: 700;
-            flex-shrink: 0;
-            min-width: 60px;
             text-align: right;
+            display: block;
         }
 
         .side-banner {
-            margin-top: 40px;
             text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .banner-large {
-            border: 3px solid #f5f5f5;
-            padding: 25px 20px;
+            border: 0.3vh solid #f5f5f5;
+            padding: 2vh 1.5vw;
             background: rgba(255,255,255,0.05);
             transform: rotate(1deg);
-            margin-bottom: 30px;
+            margin-bottom: 2vh;
         }
 
         .banner-text {
-            font-size: 1.4rem;
+            font-size: calc(0.8vw + 0.8vh);
             font-weight: 700;
             letter-spacing: 0.1em;
             line-height: 1.2;
@@ -277,24 +284,33 @@ html, body {
 
         .banner-line {
             display: block;
-            margin: 5px 0;
+            margin: 0.3vh 0;
         }
 
         .special-offer {
-            font-size: 1.3rem;
+            font-size: calc(0.7vw + 0.7vh);
             font-weight: 400;
             font-style: italic;
             text-align: center;
             transform: rotate(-1deg);
-            margin-top: 20px;
+            margin-top: 1.5vh;
+        }
+
+        .additional-sections {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3vw;
+            margin-top: 3vh;
+            flex: 1;
+            overflow: hidden;
         }
 
         .editable {
             cursor: pointer;
             transition: background 0.2s;
-            border-radius: 3px;
-            padding: 2px 4px;
-            margin: -2px -4px;
+            border-radius: 0.3vh;
+            padding: 0.2vh 0.4vw;
+            margin: -0.2vh -0.4vw;
         }
 
         .editable:hover {
@@ -302,114 +318,13 @@ html, body {
         }
 
         .editable[contenteditable="true"] {
-            outline: 2px dashed #f5f5f5;
+            outline: 0.2vh dashed #f5f5f5;
             background: rgba(255,255,255,0.15);
         }
 
-        @media (max-width: 1200px) {
-            .chalkboard-container {
-                padding: 20px;
-                min-width: 0;
-            }
-            
-            .header-boxes {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .menu-content {
-                flex-direction: column;
-                gap: 30px;
-            }
-            
-            .menu-section {
-                min-width: 0;
-                max-width: none;
-            }
+        /* Remove all media queries - everything scales automatically with vw/vh units */
+        
+        /* Additional sections for main courses, desserts, beverages */
+        .menu-section:nth-child(3) {
+            grid-column: span 1;
         }
-
-        @media (max-width: 768px) {
-            .chalkboard-border {
-                padding: 20px;
-                border-width: 4px;
-            }
-            
-            .main-title {
-                font-size: 3rem;
-            }
-            
-            .subtitle {
-                font-size: 1.5rem;
-            }
-            
-            .banner-shape {
-                font-size: 1.4rem;
-                padding: 8px 30px;
-            }
-        }
-
-        @media (min-width: 1800px) {
-    html, body {
-        font-size: 22px;
-    }
-    .chalkboard-container {
-        min-width: 2000px;
-        min-height: 1200px;
-        padding: 100px;
-    }
-    .chalkboard-border {
-        border-width: 14px;
-        border-radius: 48px;
-        padding: 100px;
-        min-height: 1300px;
-    }
-    .menu-container {
-        max-width: 2200px;
-        max-height: 1400px;
-        padding: 100px 180px 120px 180px;
-    }
-    .main-title, .menu-title {
-        font-size: clamp(5rem, 8vw, 9rem);
-    }
-    .subtitle, .restaurant-title {
-        font-size: clamp(2.5rem, 4vw, 4.5rem);
-    }
-    .section-title, .banner-shape {
-        font-size: clamp(2.8rem, 4vw, 4.5rem);
-        min-width: 320px;
-        padding: 12px 64px 12px 48px;
-    }
-    .item-name {
-        font-size: 2.2rem !important;
-        max-width: 22ch;
-    }
-    .item-description, .item-desc {
-        font-size: 1.7rem;
-    }
-    .item-price {
-        font-size: 2.2rem;
-        min-width: 120px;
-    }
-    .special-title, .special-price {
-        font-size: 2.5rem;
-    }
-    .special-box, .special-dish, .special-menu {
-        min-width: 420px;
-        font-size: 2rem;
-        padding: 48px 48px;
-    }
-    .side-banner {
-        font-size: 2.2rem;
-        min-width: 420px;
-        padding: 48px 36px;
-    }
-    .side-note {
-        font-size: 2rem;
-    }
-    .banner-large {
-        padding: 40px 40px;
-    }
-    .special-offer {
-        font-size: 2rem;
-    }
-}
